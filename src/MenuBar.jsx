@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import List from 'material-ui/core/List'
-import ListItem from 'material-ui/core/ListItem'
-import ListItemText from 'material-ui/core/ListItemText'
-import Collapse from 'material-ui/core/Collapse'
-import ExpandLess from 'material-ui/icons/ExpandLess'
-import ExpandMore from 'material-ui/icons/ExpandMore'
-import Drawer from 'material-ui/core/Drawer'
-import { withStyles } from 'material-ui/core/styles'
+import List from '@material-ui/core/List/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText/ListItemText'
+import Collapse from '@material-ui/core/Collapse/Collapse'
+import ExpandLess from '@material-ui/icons/ExpandLess'
+import ExpandMore from '@material-ui/icons/ExpandMore'
+import Drawer from '@material-ui/core/Drawer/Drawer'
+import withStyles from '@material-ui/core/styles/withStyles'
 import { Link } from 'react-router-dom'
 import menuItems from './menuItems'
 
@@ -25,7 +25,6 @@ const styles = {
 class MenuBar extends Component {
     constructor( props ) {
         super( props ) 
-            super( props )
             this.state = {}
         }
     
@@ -87,7 +86,7 @@ class MenuBar extends Component {
     }
 
   render() {
-      const { classes, drawerOpen, MenuOptions } = this.props
+      const { classes } = this.props
       return (
           <div className={classes.list}>
               <Drawer
